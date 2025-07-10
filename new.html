@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="new2.css" />
 </head>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>More About Me</h2>
+
+    <h4>Education:</h4>
+    <ul class="modal-list">
+      <li>D'Archangel's Ark Academy (Nursery to Grade 3)</li>
+      <li>St. Cyr Academy (Grade 4)</li>
+      <li>Nazareth Institute (Grade 5)</li>
+      <li>M.G. Medalla Integrated School (Grade 6)</li>
+      <li>Philippine Science High School (Current)</li>
+    </ul>
+
+    <h4>Home Address:</h4>
+    <p class="home-address">Brgy. Guihaman, Leganes, Iloilo</p>
+
+    <h4>Date of Birth:</h4>
+    <p class="birth-date">October 10, 2009</p>
+  </div>
+</div>
 <body>
   <nav>
     <ul>
@@ -31,68 +52,201 @@
           <span class="title">Student Web Developer</span>
           <h1>Hello, I'm <span>Zach</span></h1>
         </div>
-        <img src="ppic.png" alt="pic" class="profile-pic">
+        <img src="ppic.png" alt="pic" class="profile-pic" />
       </div>
       <p>
         I am a Philippine Science High School scholar with a passion for coding and gaming.
         I plan to slowly build up my coding skills and knowledge, as I think it will be useful 
         even in other professions.
       </p>
-      <a href="#about" class="btn">Learn more about me</a>
+      <a href="#about" class="btn" id="learnMoreBtn">Learn more about me</a>
     </div>
   </main>
 
   <div class="about-block" id="about">
-  <h2>About Me</h2>
+    <h2>About Me</h2>
 
-  <div class="top-about">
-    <div class="about-section" id="personal">
-      <h3>Personal Details</h3>
-      <ul>
-        <li>Full name is Zachariah Francis G. Azaña</li>
-        <li>15 Years Old</li>
-        <li>Goes to PSHW-WVC</li>
-        <li>Likes listening to music, chilling, and gaming</li>
-      </ul>
+    <div class="top-about">
+      <div class="about-section" id="personal">
+        <h3 class="section-header" data-target="personal-content">
+          Personal Details
+          <button class="toggle-btn" data-target="personal-content">
+            <i class="fas fa-chevron-down arrow"></i>
+          </button>
+        </h3>
+        <div class="section-content" id="personal-content">
+          <ul>
+            <li>Full name is Zachariah Francis G. Azaña</li>
+            <li>15 Years Old</li>
+            <li>Goes to PSHS-WVC</li>
+            <li>Likes listening to music, chilling, and gaming</li>
+          </ul>
+          <button class="learn-more-btn" id="openModal">Learn more</button>
+        </div>
+      </div>
+
+      <div class="about-section" id="skills">
+        <h3 class="section-header" data-target="skills-content">
+          Skills
+          <button class="toggle-btn" data-target="skills-content">
+            <i class="fas fa-chevron-down arrow"></i>
+          </button>
+        </h3>
+        <div class="section-content" id="skills-content">
+          <ul class="skills-list">
+            <li>🧠 Critical Thinking</li>
+            <li>🛠️ Problem Solving</li>
+            <li><i class="fab fa-html5 skill-icon" style="color:#e34c26;"></i> HTML</li>
+            <li><i class="fab fa-css3-alt skill-icon" style="color:#264de4;"></i> CSS</li>
+            <li><i class="fab fa-js-square skill-icon" style="color:#f0db4f;"></i> JavaScript</li>
+            <li><i class="fab fa-php skill-icon" style="color:#8892be;"></i> PHP</li>
+            <li><i class="fas fa-database skill-icon" style="color:#00618a;"></i> MySQL</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="about-section" id="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>Problem solving</li>
-        <li>Critical Thinking</li>
-        <li>HTML, CSS, JavaScript, and PHP</li>
-      </ul>
+    <div class="bottom-about">
+      <div class="about-section" id="projects">
+        <h3 class="section-header" data-target="projects-content">
+          Projects Done
+          <button class="toggle-btn" data-target="projects-content">
+            <i class="fas fa-chevron-down arrow"></i>
+          </button>
+        </h3>
+        <div class="section-content" id="projects-content">
+          <ul>
+            <li>Educational Game using JavaScript</li>
+            <li>Animating using JavaScript</li>
+            <li>Designing web article</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-section" id="goals">
+        <h3 class="section-header" data-target="goals-content">
+          Goals
+          <button class="toggle-btn" data-target="goals-content">
+            <i class="fas fa-chevron-down arrow"></i>
+          </button>
+        </h3>
+        <div class="section-content" id="goals-content">
+          <ul>
+            <li>Get a house</li>
+            <li>Finish my studies</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="bottom-about">
-    <div class="about-section" id="projects">
-      <h3>Projects Done</h3>
-      <ul>
-        <li>Educational Game using JavaScript</li>
-        <li>Animating using JavaScript</li>
-        <li>Designing web article</li>
-      </ul>
-    </div>
-
-    <div class="about-section" id="goals">
-      <h3>Goals</h3>
-      <ul>
-        <li>Get a house</li>
-        <li>Finish my studies</li>
-      </ul>
-    </div>
-  </div>
-</div>
-  </section>
 
   <section class="contact" id="contact">
     <h2>Contact Info</h2>
     <ul>
       <li><span>Personal Email:</span> zachyazana@gmail.com or zachariahazana@wvc.pshs.edu.ph</li>
-    <li><span>Contact Number:</span> 09761637161</li>
+      <li><span>Contact Number:</span> 09761637161</li>
+      <li>
+        <span>Socials:</span>
+        <a href="https://www.facebook.com/zachy.azana/" target="_blank" class="social-link">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+      </li>
     </ul>
   </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>More About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+        bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+        Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll(".section-header");
+    const buttons = document.querySelectorAll(".toggle-btn");
+
+    function toggleSection(targetId) {
+      document.querySelectorAll(".section-content").forEach(section => {
+        if (section.id === targetId) {
+          section.classList.toggle("show");
+        } else {
+          section.classList.remove("show");
+        }
+      });
+
+      document.querySelectorAll(".arrow").forEach(icon => {
+        const parentBtn = icon.closest(".toggle-btn");
+        if (parentBtn?.dataset.target === targetId) {
+          icon.classList.toggle("rotated");
+        } else {
+          icon.classList.remove("rotated");
+        }
+      });
+    }
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const targetId = header.dataset.target;
+        toggleSection(targetId);
+      });
+    });
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.stopPropagation();
+        const targetId = btn.dataset.target;
+        toggleSection(targetId);
+      });
+    });
+
+    window.addEventListener("load", () => {
+      const hash = location.hash.slice(1);
+      const contentId = `${hash}-content`;
+      if (document.getElementById(contentId)) {
+        toggleSection(contentId);
+      }
+    });
+
+    // Modal logic
+    const modal = document.getElementById("modal");
+    const openModalBtn = document.getElementById("openModal");
+    const closeModalBtn = document.getElementById("closeModal");
+
+    openModalBtn.addEventListener("click", () => {
+      modal.style.display = "block";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", e => {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+     // Scroll to About and expand all sections on Learn More click
+  const learnMoreBtn = document.getElementById("learnMoreBtn");
+
+  learnMoreBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Scroll to the About section
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+
+    // Expand all section contents
+    const allContent = document.querySelectorAll(".section-content");
+    const allIcons = document.querySelectorAll(".arrow");
+
+    allContent.forEach(content => content.classList.add("show"));
+    allIcons.forEach(icon => icon.classList.add("rotated"));
+  });
+  </script>
 </body>
 </html>
